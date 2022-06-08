@@ -1,0 +1,22 @@
+{
+  "name": "bassist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@wordpress/env": "^4.8.0",
+    "eslint": "^8.17.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "stylelint": "^14.8.5",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-wordpress": "^17.0.0"
+  },
+  "scripts": {
+    "activate:theme": "wp-env run cli 'wp theme activate wp-bassist'",
+    "start:update": "wp-env start --update && npm run activate:theme"
+  },
+  "volta": {
+    "node": "16.15.0",
+    "yarn": "1.22.17"
+  }
+}
