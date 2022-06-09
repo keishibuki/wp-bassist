@@ -47,5 +47,3 @@
 				<div id="search"><?php get_search_form(); ?></div>
 			</nav>
 		</header>
-		<div id="container">
-			<main id="content" role="main">
