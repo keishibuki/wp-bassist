@@ -7,7 +7,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> <?php blankslate_schema_type(); ?>>
+<html <?php language_attributes(); ?>>
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
