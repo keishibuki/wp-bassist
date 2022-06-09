@@ -3,8 +3,7 @@
 	"plugins": [
 		"https://downloads.wordpress.org/plugin/query-monitor.3.8.2.zip",
 		"https://downloads.wordpress.org/plugin/wp-multibyte-patch.2.9.zip",
-		"https://downloads.wordpress.org/plugin/duplicate-post.4.4.zip",
-		"https://downloads.wordpress.org/plugin/gutenberg.12.8.1.zip"
+		"https://downloads.wordpress.org/plugin/duplicate-post.4.4.zip"
 	],
 	"themes": [
 		"."
