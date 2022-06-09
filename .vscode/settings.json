@@ -1,11 +1,6 @@
 {
 	"scss.validate": false,
 	"stylelint.configFile": "./.stylelintrc",
-	"phpcs.executablePath": "/Users/kei/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs",
-	"phpcbf.executablePath": "/Users/kei/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf",
-	"phpcs.standard": "WordPress",
-	"phpcbf.standard": "WordPress",
-	"phpcbf.onsave": true,
 	"html.format.contentUnformatted": "pre,code,textarea",
 	"html.format.endWithNewline": true,
 	"html.format.extraLiners": "head, body, /html",
@@ -15,18 +10,23 @@
 	"html.format.preserveNewLines": true,
 	"html.format.wrapLineLength": 120,
 	"html.format.wrapAttributes": "auto",
+	"phpcs.executablePath": "/Users/kei/.composer/vendor/squizlabs/php_codesniffer/bin/phpcs",
+	"phpcbf.executablePath": "/Users/kei/.composer/vendor/squizlabs/php_codesniffer/bin/phpcbf",
+	"phpcs.standard": "WordPress",
+	"phpcbf.standard": "WordPress",
+	"phpcbf.onsave": true,
 	"[php]": {
-	  "editor.defaultFormatter": "persoderlind.vscode-phpcbf",
-	  "editor.formatOnSave": true,
-	  "editor.detectIndentation": false,
-	  "editor.insertSpaces": false,
-	  "editor.tabSize": 4,
-	  "files.eol": "\n",
+		"editor.defaultFormatter": "persoderlind.vscode-phpcbf",
+		"editor.formatOnSave": true,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4,
+		"files.eol": "\n",
 	},
 	"[css]": {
-	  "editor.formatOnSave": false,
-	  "editor.codeActionsOnSave": {
-		"source.fixAll.stylelint": true
-	  },
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.stylelint": true
+		},
 	},
 }
