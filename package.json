@@ -11,10 +11,12 @@
     "stylelint": "^14.8.5",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-wordpress": "^17.0.0",
+    "tailwind-config-viewer": "^1.7.1",
     "tailwindcss": "^3.0.24"
   },
   "scripts": {
     "tailwind:watch": "npx tailwindcss -i ./tailwind.css -o ./style.css --watch",
+    "tailwind:viewer": "tailwind-config-viewer -o",
     "activate:theme": "wp-env run cli 'wp theme activate wp-bassist'",
     "start:update": "wp-env start --update && npm run activate:theme"
   },
