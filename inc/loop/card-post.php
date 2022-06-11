@@ -6,6 +6,9 @@
  */
 
 ?>
+<?php
+	$post_taxonomy = isset( $args['taxonomy'] ) ? $args['taxonomy'] : 'category';
+?>
 
 <li <?php post_class(); ?>>
 	<picture class="block">
@@ -25,14 +28,16 @@
 	<time datetime="<?php the_time( 'Y-m-d' ); ?>"
 		class="block text-sm leading-none mt-3"><?php the_time( 'Y-m-d' ); ?></time>
 	<div class="flex items-center gap-2 my-3">
-		<?php $categories = get_the_terms( $post->ID, 'category' ); ?>
+		<?php $categories = get_the_terms( $post->ID, $post_taxonomy ); ?>
 		<?php if ( $categories ) : ?>
 			<?php foreach ( $categories as $post_cat ) : ?>
-			<a href="<?php echo esc_url( get_term_link( $post_cat->term_id, 'category' ) ); ?>"
-				class="inline-block px-3 py-1 text-sm text-white bg-primary">
+			<a
+				href="<?php echo esc_url( get_term_link( $post_cat->term_id, $post_taxonomy ) ); ?>"
+				class="inline-block px-3 py-1 text-sm text-white bg-primary"
+			>
 				<?php echo esc_html( $post_cat->name ); ?>
 			</a>
-			<?php endforeach; ?>
+		<?php endforeach; ?>
 		<?php endif; ?>
 	</div>
 	<h3 class="font-bold line-clamp-2">

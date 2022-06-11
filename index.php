@@ -76,24 +76,6 @@
 			<?php endif; ?>
 		</div>
 	</section>
-	<section class="py-12 bg-primary">
-		<div class="px-4 md:px-3 md:mx-auto md:container md:max-w-5xl">
-			<h2 class="text-2xl leading-sung text-center mb-10 text-white md:text-5xl">
-				<span class="block">INFORMATION</span>
-				<span class="text-lg block mt-1 md:text-2xl">お知らせ</span>
-			</h2>
-			<?php if ( have_posts() ) : ?>
-			<ul class="">
-				<?php
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'inc/loop/news', 'post', array( 'contrast' => true ) );
-				}
-				?>
-			</ul>
-			<?php endif; ?>
-		</div>
-	</section>
 	<section class="py-12 bg-gray-200">
 		<div class="px-4 md:px-3 md:mx-auto md:container md:max-w-5xl">
 			<h2 class="text-2xl leading-sung text-center mb-5 md:mb-10 md:text-5xl">

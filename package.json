@@ -18,7 +18,8 @@
     "tailwind:watch": "npx tailwindcss -i ./tailwind.css -o ./style.css --watch",
     "tailwind:viewer": "tailwind-config-viewer -o",
     "activate:theme": "wp-env run cli 'wp theme activate wp-bassist'",
-    "start:update": "wp-env start --update && npm run activate:theme"
+    "start:update": "wp-env start --update && npm run activate:theme",
+    "wp-env": "wp-env"
   },
   "volta": {
     "node": "16.15.0",
