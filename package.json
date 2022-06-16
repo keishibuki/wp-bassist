@@ -6,8 +6,12 @@
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.0",
     "@wordpress/env": "^4.8.0",
+    "concurrently": "^7.2.2",
     "eslint": "^8.17.0",
     "eslint-config-wordpress": "^2.0.0",
+    "postcss": "^8.4.14",
+    "postcss-import": "^14.1.0",
+    "postcss-nested": "^5.0.6",
     "stylelint": "^14.8.5",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-wordpress": "^17.0.0",
@@ -15,7 +19,9 @@
     "tailwindcss": "^3.0.24"
   },
   "scripts": {
-    "tailwind:watch": "npx tailwindcss -i ./tailwind.css -o ./style.css --watch",
+    "tailwind:style": "npx tailwindcss -i ./resources/css/style.css -o ./assets/css/style.css --postcss --minify --watch",
+    "tailwind:editor": "npx tailwindcss -i ./resources/css/editor.css -o ./assets/css/editor.css --postcss --minify --watch",
+    "tailwind:watch": "concurrently \"npm run tailwind:style\" \"npm run tailwind:editor\"",
     "tailwind:viewer": "tailwind-config-viewer -o",
     "activate:theme": "wp-env run cli 'wp theme activate wp-bassist'",
     "start:update": "wp-env start --update && npm run activate:theme",

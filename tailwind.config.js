@@ -20,13 +20,36 @@ const colors = theme.settings.color.palette.reduce((acc, item) => {
 module.exports = {
   content: ["./**/*.php"],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: 0,
+      },
+    },
     extend: {
       colors,
+      screens: {
+        tablet: "521px",
+        pc: "961px",
+      },
       aspectRatio: {
         "4/3": "4 / 3",
         "3/2": "3 / 2",
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    function ({ addComponents }) {
+      addComponents({
+        ".container": {
+          maxWidth: "100%",
+          "@screen tablet": {
+            maxWidth: "1024px",
+          },
+        },
+      });
+    },
+  ],
 };

@@ -1,0 +1,157 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.wp-block {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.entry-content,
+.wp-admin .editor-styles-wrapper {
+    @apply text-base;
+
+    h1, .editor-post-title {
+        @apply text-3xl font-bold tracking-wider mb-4 text-center;
+    }
+    
+    h2 {
+        @apply text-2xl font-bold tracking-wider mt-8 mb-4 p-4 border-l border-primary bg-gray-100;
+    }
+
+    @screen md {
+        h2 {
+            @apply mt-12 mb-8;
+        }
+    }
+    
+    h3 {
+        @apply text-lg font-bold mt-8 mb-4 py-2.5 px-4 bg-gray-100;
+    }
+
+    @screen md {
+        h3 {
+            @apply mt-12 mb-8;
+        }
+    }
+    
+    h4, h5, h6 {
+        @apply text-base font-bold mt-8;
+    }
+
+    @screen md {
+        h4, h5, h6 {
+            @apply mt-12 mb-8;
+        }
+    }
+
+    h4 {
+        @apply pb-3 border-b border-gray-200;
+    }
+
+    h5 {
+        @apply pl-3 border-l-4 border-gray-300
+    }
+
+    p {
+        @apply my-6 leading-6;
+    }
+    
+    a {
+        @apply text-blue-500 underline;
+    }
+    
+    a:hover {
+        @apply no-underline;
+    }
+
+    ul {
+        @apply p-0;
+
+        li {
+            @apply list-disc list-inside;
+        }
+
+        ul {
+            @apply ml-8;
+        }
+    }
+    
+    ol {
+        @apply p-0;
+
+        li {
+            @apply list-decimal list-inside;
+        }
+
+        ol {
+            @apply ml-8;
+        }
+    }
+
+    table {
+        @apply border-t border-l border-gray-300;
+
+        th, td {
+            @apply border-r border-b border-gray-300 p-4;
+        }
+
+        thead {
+            @apply bg-gray-100;
+        }
+    }
+
+    dl {
+        dt {
+            @apply text-base font-bold mt-12 mb-8 pt-1 pl-3 border-l-4 border-gray-300;
+        }
+
+        dd {
+            @apply list-item my-4 ml-4;
+        }
+    }
+
+    pre {
+        @apply p-4 bg-gray-100 text-sm whitespace-pre-wrap;
+    }
+
+    code, q {
+        @apply p-1 rounded-sm bg-gray-100 text-sm;
+    }
+
+    blockquote {
+        @apply relative my-8 py-4 pl-8 border-t border-b border-gray-200 text-base italic text-gray-500;
+
+        *:first-child {
+            @apply mt-0;
+        }
+
+        *:last-child {
+            @apply mb-0;
+        }
+    }
+
+    q {
+        @apply italic;
+    }
+
+    cite {
+        @apply text-sm;
+    }
+
+    img {
+        display: inline;
+    }
+
+    .aligncenter {
+        @apply mx-auto;
+    }
+
+    .alignright {
+        @apply my-2 ml-8 float-right;
+    }
+
+    .alignleft {
+        @apply my-2 mr-8 float-left;
+    }
+}
