@@ -19,7 +19,12 @@ function bassist_setup() {
 	if ( ! isset( $content_width ) ) {
 		$content_width = 1920;
 	}
-	register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'bassist' ) ) );
+	register_nav_menus(
+		array(
+			'primary' => 'Primary Menu',
+			'footer'  => 'Footer Menu',
+		)
+	);
 }
 add_action( 'after_setup_theme', 'bassist_setup' );
 
@@ -97,3 +102,35 @@ add_action(
 		}
 	}
 );
+
+/**
+ * Add "<li>" class to wp_nav_menu
+ *
+ * @param string[] $atts The HTML attributes applied to the menu item's <li> element, empty strings are ignored.
+ * @param WP_Post  $menu_item The current menu item object.
+ * @param stdClass $args An object of wp_nav_menu() arguments.
+ * @return strong[]
+ */
+function add_additional_class_on_li( $atts, $menu_item, $args ) {
+	if ( isset( $args->add_li_class ) ) {
+		$atts['class'] = $args->add_li_class;
+	}
+	return $atts;
+}
+add_filter( 'nav_menu_css_class', 'add_additional_class_on_li', 1, 3 );
+
+/**
+ * Add "<a>" class to wp_nav_menu
+ *
+ * @param Array    $atts The HTML attributes applied to the menu item's <a> element, empty strings are ignored.
+ * @param WP_Post  $menu_item The current menu item object.
+ * @param stdClass $args An object of wp_nav_menu() arguments.
+ * @return strong[]
+ */
+function add_additional_class_on_a( $atts, $menu_item, $args ) {
+	if ( isset( $args->add_a_class ) ) {
+		$atts['class'] = $args->add_a_class;
+	}
+	return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3 );
