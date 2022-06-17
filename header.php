@@ -13,37 +13,42 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
 	<?php wp_head(); ?>
+	<?php if ( is_user_logged_in() ) : ?>
+	<style type="text/css">
+	html {
+		margin-top: 0 !important;
+	}
+
+	#wpadminbar {
+		display: none;
+	}
+
+	</style>
+	<?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="wrapper" class="hfeed">
 		<header id="header" role="banner">
-			<div id="branding">
-				<div id="site-title" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-					<?php
-					if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
-						echo '<h1>'; }
-					echo '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name' ) ) . '" rel="home" itemprop="url"><span itemprop="name">' . esc_html( get_bloginfo( 'name' ) ) . '</span></a>';
-					if ( is_front_page() || is_home() || is_front_page() && is_home() ) {
-						echo '</h1>'; }
-					?>
-				</div>
-				<div id="site-description" <?php
-				if ( ! is_single() ) {
-					echo ' itemprop="description"'; }
-				?>><?php bloginfo( 'description' ); ?></div>
-			</div>
-			<nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'main-menu',
-						'link_before'    => '<span itemprop="name">',
-						'link_after'     => '</span>',
-					)
-				);
-				?>
-				<div id="search"><?php get_search_form(); ?></div>
-			</nav>
+			<?php
+			wp_nav_menu(
+				array(
+					'container'       => 'nav',
+					'container_id'    => 'primary-menu',
+					'container_class' => '',
+					'menu_class'      => '',
+					'theme_location'  => 'footer',
+					'li_class'        => '',
+					'fallback_cb'     => false,
+					'add_li_class'    => 'flex items-center',
+					'add_a_class'     => 'block w-full py-4 px-2 text-white text-center',
+				)
+			);
+			?>
+			<button type="button" id="primary-menu-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</header>

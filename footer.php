@@ -14,7 +14,7 @@ $site_name = get_bloginfo( 'name' );
 			wp_nav_menu(
 				array(
 					'container'       => 'nav',
-					'container_id'    => 'primary-menu',
+					'container_id'    => 'footer-menu',
 					'container_class' => '',
 					'menu_class'      => 'grid gap-4 text-sm grid-cols-2 tablet:grid-cols-none tablet:grid-rows-5 tablet:grid-flow-col',
 					'theme_location'  => 'footer',

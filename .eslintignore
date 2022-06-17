@@ -1,0 +1,7 @@
+build/
+public/
+**/node_modules/
+src/stories/**/*
+*.config.js
+.*lintrc.js
+**/*.test.*

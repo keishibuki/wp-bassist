@@ -1,0 +1,1 @@
+(()=>{window.addEventListener("load",function(){let t="open-drawer",a=document.querySelector("body"),o=document.querySelector("#primary-menu");document.querySelector("#primary-menu-toggle").addEventListener("click",function(e){e.preventDefault(),console.log("aaaaaaaaaa"),e.target.classList.toggle(t),o.classList.toggle(t),a.classList.toggle(t)})});})();

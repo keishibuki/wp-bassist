@@ -29,4 +29,14 @@
 			"source.fixAll.stylelint": true
 		},
 	},
+	"eslint.enable": true,
+	"eslint.packageManager": "yarn",
+	"javascript.format.enable": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		}
+	},
 }
