@@ -2,6 +2,13 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@media (max-width: 375px) {
+	body {
+		width: 375px;
+		overflow-x: hidden;
+	}
+}
+
 .primary-menu-toggle {
 	@apply relative w-8 h-6;
 

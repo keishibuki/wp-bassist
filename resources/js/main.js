@@ -1,3 +1,5 @@
+import 'viewport-extra';
+
 window.addEventListener( 'load', function() {
 	const activeClass = 'open-drawer';
 	const body = document.querySelector( 'body' );

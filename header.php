@@ -12,6 +12,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport-extra" content="width=device-width,initial-scale=1,min-width=375" />
 	<?php wp_head(); ?>
 	<?php if ( is_user_logged_in() ) : ?>
 	<style type="text/css">

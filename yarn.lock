@@ -5003,6 +5003,11 @@ vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
+viewport-extra@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/viewport-extra/-/viewport-extra-2.1.1.tgz#e4120c13be34fc4ba227002746abab1f6cc35951"
+  integrity sha512-8LJzNlxj0AEoZ12aFx5HKUyiBCzrehwwlRD6U19EBJGj8H0Oij16rUodjIzXTRP3aDulQuRfxyCfv1Efby3eKw==
+
 wcwidth@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/wcwidth/-/wcwidth-1.0.1.tgz#f0b0dcf915bc5ff1528afadb2c0e17b532da2fe8"
