@@ -23,7 +23,7 @@
 		<div class="text-center mt-5 tablet:mt-10">
 			<a href="<?php echo esc_attr( home_url( '/blog/' ) ); ?>"
 				class="inline-block px-8 py-4 rounded font-bold border text-center border-primary text-white bg-primary transition-all duration-300 ease-in hover:bg-white hover:text-primary scroll fadeIn">
-				ブログをもっと見る
+				お問い合わせ
 			</a>
 		</div>
 	</div>
