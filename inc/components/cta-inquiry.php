@@ -21,7 +21,7 @@
 			<div class="text-sm leading-none font-bold">（平日00:00〜00:00）</div>
 		</div>
 		<div class="text-center mt-5 tablet:mt-10">
-			<a href="<?php echo esc_attr( home_url( '/blog/' ) ); ?>"
+			<a href="<?php echo esc_attr( home_url( '/contact/' ) ); ?>"
 				class="inline-block px-8 py-4 rounded font-bold border text-center border-primary text-white bg-primary transition-all duration-300 ease-in hover:bg-white hover:text-primary scroll fadeIn">
 				お問い合わせ
 			</a>
