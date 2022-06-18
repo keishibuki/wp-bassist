@@ -29,7 +29,9 @@ $site_name = get_bloginfo( 'name' );
 
 		<div class="pc:flex-1 pc:order-1">
 			<picture class="flex justify-center mb-4 pc:justify-start">
-				<img src="https://placehold.jp/180x60.png" alt="<?php echo esc_html( $site_name ); ?>" />
+				<a href="<?php echo esc_attr( home_url() ); ?>">
+					<img src="https://placehold.jp/180x60.png" alt="<?php echo esc_html( $site_name ); ?>" />
+				</a>
 			</picture>
 			<p class="text-sm mb-2 text-center pc:text-left">
 				株式会社〇〇〇〇<br />

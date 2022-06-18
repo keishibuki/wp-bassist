@@ -2,8 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-#primary-menu-toggle {
-	@apply relative z-50 w-12 h-8;
+.primary-menu-toggle {
+	@apply relative w-8 h-6;
 
 	span {
 		@apply pointer-events-none rounded absolute top-0 right-0 bottom-0 left-0 m-auto h-1 bg-zinc-800 transition-all;
@@ -16,7 +16,13 @@
 	}
 }
 
-#primary-menu-toggle.open-drawer {
+@screen pc {
+	.primary-menu-toggle {
+		@apply hidden;
+	}
+}
+
+.primary-menu-toggle.open-drawer {
 	span {
 		@apply bg-white;
 	}
@@ -32,7 +38,37 @@
 }
 
 #primary-menu {
-	@apply fixed z-40 top-0 right-0 left-0 w-full h-screen p-8 overflow-y-scroll opacity-0 pointer-events-none bg-gray-800;
+	@apply fixed z-40 top-0 right-0 left-0 w-full h-screen p-8 overflow-y-scroll opacity-0 pointer-events-none bg-gray-800 transition-all ease-in duration-300;
+
+	.primary-menu-toggle {
+		@apply absolute top-6 right-4;
+	}
+
+	a {
+		@apply block w-full py-4 px-2 text-white text-center;
+	}
+}
+
+@screen pc {
+	#primary-menu {
+		@apply relative w-auto h-auto p-0 overflow-auto opacity-100 pointer-events-auto bg-transparent overflow-visible;
+
+		ul {
+			@apply flex flex-wrap justify-end;
+		}
+
+		a {
+			@apply py-2 text-inherit;
+		}
+
+		.current-menu-item {
+			@apply relative font-bold;
+
+			a {
+				@apply text-primary;
+			}
+		}
+	}
 }
 
 #primary-menu.open-drawer {
@@ -40,5 +76,7 @@
 }
 
 body.open-drawer {
-	@apply fixed;
+	@apply fixed w-full;
 }
+
+/* menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-701 current_page_item menu-item-2130  */
