@@ -9,10 +9,10 @@
 <?php get_header(); ?>
 
 <main>
-	<section class="py-12 pc:py-48"></section>
-	<section class="py-12 bg-gray-200 pc:py-24">
+	<section class="py-12 bg-gray-200 pc:py-48"></section>
+	<section class="py-12 pc:py-24">
 		<div class="container">
-			<h2 class="text-2xl leading-sung text-center mb-5 tablet:text-5xl tablet:mb-10 scroll fadeIn">
+			<h2 class="text-3xl font-bold leading-sung text-center mb-5 tablet:text-5xl tablet:mb-10 scroll fadeIn">
 				<span class="block">FEATURE</span>
 				<span class="text-lg block mt-1 tablet:text-2xl">特徴</span>
 			</h2>
@@ -67,9 +67,9 @@
 			)
 		);
 		?>
-	<section class="py-12 pc:py-24">
+	<section class="py-12 bg-gray-200 pc:py-24">
 		<div class="container">
-			<h2 class="text-2xl leading-sung text-center mb-5 tablet:text-5xl tablet:mb-10 scroll fadeIn">
+			<h2 class="text-3xl font-bold leading-sung text-center mb-5 tablet:text-5xl tablet:mb-10 scroll fadeIn">
 				<span class="block">INFORMATION</span>
 				<span class="text-lg block mt-1 tablet:text-2xl">お知らせ</span>
 			</h2>
@@ -84,7 +84,7 @@
 			</ul>
 			<div class="text-center mt-5 tablet:mt-10">
 				<a href="<?php echo esc_attr( home_url( '/information/' ) ); ?>"
-					class="hidden px-8 py-4 rounded font-bold border text-center border-primary text-primary bg-white transition-all duration-300 ease-in hover:bg-primary hover:text-white tablet:inline-block scroll fadeIn">
+					class="inline-block px-8 py-4 rounded font-bold border text-center border-primary text-primary bg-white transition-all duration-300 ease-in hover:bg-primary hover:text-white scroll fadeIn">
 					お知らせをもっと見る
 				</a>
 			</div>
@@ -107,14 +107,14 @@
 			)
 		);
 		?>
-	<section class="py-12 bg-gray-200 pc:py-24">
-		<div class="px-4 md:px-3 md:mx-auto md:container md:max-w-5xl">
-			<h2 class="text-2xl leading-sung text-center mb-5 md:mb-10 md:text-5xl scroll fadeIn">
+	<section class="py-12 pc:py-24">
+		<div class="container">
+			<h2 class="text-3xl font-bold leading-sung text-center mb-5 tablet:text-5xl tablet:mb-10 scroll fadeIn">
 				<span class="block">BLOG</span>
-				<span class="text-lg block mt-1 md:text-2xl">ブログ</span>
+				<span class="text-lg block mt-1 tablet:text-2xl">ブログ</span>
 			</h2>
 			<?php if ( $the_query->have_posts() ) : ?>
-			<ul class="grid grid-cols-2 gap-x-4 gap-8 md:gap-x-8 md:grid-cols-3">
+			<ul class="grid grid-cols-2 gap-x-4 gap-8 tablet:gap-x-8 tablet:grid-cols-3">
 				<?php
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
@@ -124,7 +124,7 @@
 			</ul>
 			<div class="text-center mt-5 tablet:mt-10">
 				<a href="<?php echo esc_attr( home_url( '/blog/' ) ); ?>"
-					class="hidden px-8 py-4 rounded font-bold border text-center border-primary text-primary bg-white transition-all duration-300 ease-in hover:bg-primary hover:text-white tablet:inline-block scroll fadeIn">
+					class="inline-block px-8 py-4 rounded font-bold border text-center border-primary text-primary bg-white transition-all duration-300 ease-in hover:bg-primary hover:text-white scroll fadeIn">
 					ブログをもっと見る
 				</a>
 			</div>
@@ -137,6 +137,8 @@
 			<?php wp_reset_postdata(); ?>
 		</div>
 	</section>
+
+	<?php get_template_part( 'inc/components/cta', 'inquiry' ); ?>
 </main>
 
 <?php get_footer(); ?>
