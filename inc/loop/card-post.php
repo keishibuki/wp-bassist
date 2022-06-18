@@ -10,7 +10,7 @@
 	$post_taxonomy = isset( $args['taxonomy'] ) ? $args['taxonomy'] : 'category';
 ?>
 
-<li <?php post_class(); ?>>
+<li <?php post_class( array( 'scroll', 'fadeIn' ) ); ?>>
 	<picture class="block">
 		<a href="<?php the_permalink(); ?>">
 			<?php

@@ -30,6 +30,12 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
+	<noscript>
+		<div
+			class="z-50 fixed top-0 right-0 bottom-0 left-0 w-screen h-screen bg-white flex items-center justify-center text-center">
+			<p>このサイトではJavaScriptを使用しています。<br />JavaScriptを有効にしてください。</p>
+		</div>
+	</noscript>
 	<div id="wrapper" class="hfeed">
 		<header id="header" class="">
 			<div class="px-4 py-2 flex items-center justify-between">

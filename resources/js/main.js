@@ -17,3 +17,21 @@ window.addEventListener( 'load', function() {
 		} );
 	} );
 } );
+
+/**
+ * Scroll animation.
+ */
+const observer = new IntersectionObserver( ( entries ) => {
+	Array.prototype.forEach.call( entries, ( entry ) => {
+		if ( entry.isIntersecting ) {
+			entry.target.classList.add( 'scrollIn' );
+			entry.target.classList.remove( 'scroll' );
+			observer.unobserve( entry.target );
+		}
+	} );
+}, {
+	rootMargin: '-50px',
+} );
+
+const scrolls = document.querySelectorAll( '.scroll, .fadeIn' );
+scrolls.forEach( ( fadeIn ) => observer.observe( fadeIn ) );
