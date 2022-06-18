@@ -35,6 +35,7 @@
     "yarn": "1.22.17"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.0.7",
     "viewport-extra": "^2.1.1"
   }
 }

@@ -1,4 +1,18 @@
 import 'viewport-extra';
+import Splide from '@splidejs/splide';
+
+new Splide( '.splide', {
+	type: 'fade',
+	speed: 1500,
+	interval: 7500,
+	rewind: true,
+	autoplay: true,
+	arrows: false,
+	pagination: false,
+	drag: false,
+	pauseOnHover: false,
+	pauseOnFocus: false,
+} ).mount();
 
 window.addEventListener( 'load', function() {
 	const activeClass = 'open-drawer';

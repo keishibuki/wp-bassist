@@ -48,11 +48,12 @@ function get_style_update_date( $style_path = '' ) {
 function bassist_enqueue_scripts() {
 	// Styles.
 	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array(), get_style_update_date() );
-	wp_enqueue_style( 'main-style', get_theme_file_uri( '/assets/css/style.css' ), array(), get_style_update_date( get_theme_file_path( '/assets/css/style.css' ) ) );
+	wp_enqueue_style( 'app-style', get_theme_file_uri( '/assets/css/style.css' ), array(), get_style_update_date( get_theme_file_path( '/assets/css/style.css' ) ) );
 	wp_enqueue_style( 'editor-style', get_theme_file_uri( '/assets/css/editor.css' ), array(), get_style_update_date( get_theme_file_path( '/assets/css/editor.css' ) ) );
 	wp_enqueue_style( 'dashicons' );
 
 	// Scripts.
+	wp_enqueue_style( 'main-style', get_theme_file_uri( '/assets/js/main.css' ), array(), get_style_update_date( get_theme_file_path( '/assets/js/main.css' ) ) );
 	wp_enqueue_script( 'main-scripts', get_theme_file_uri( '/assets/js/main.js' ), array(), get_style_update_date( get_theme_file_path( '/assets/js/main.js' ) ), true );
 	wp_enqueue_script( 'jquery' );
 }

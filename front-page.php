@@ -9,7 +9,41 @@
 <?php get_header(); ?>
 
 <main>
-	<section class="py-12 bg-gray-200 pc:py-48"></section>
+	<section
+		class="splide before:block before:content-[''] before:absolute before:inset-0 before:bg-black before:opacity-50 before:z-20">
+		<div class="container">
+			<div class="z-30 relative py-12 flex flex-col items-center justify-center text-white tablet:py-24">
+				<h1 class="text-3xl tablet:text-5xl font-bold leading-none">キャッチコピー</h1>
+				<p class="text-base text-center mt-5 tablet:mt-10">
+					企業・サービス・製品が何かを補足するコピー企業・サービス・製品が何かを補足するコピー<br />企業・サービス・製品が何かを補足するコピー。</p>
+				<div class="text-center mt-5 tablet:mt-10">
+					<a href="<?php echo esc_attr( home_url( '/contact/' ) ); ?>"
+						class="inline-block px-16 py-4 rounded font-bold border text-center border-primary text-white bg-primary transition-all duration-300 ease-in hover:bg-white hover:text-primary">
+						お問い合わせ
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="splide__track">
+			<ul class="splide__list">
+				<li class="splide__slide">
+					<picture>
+						<img src="https://picsum.photos/seed/100/1920/750" alt="" width="1920" height="750" />
+					</picture>
+				</li>
+				<li class="splide__slide">
+					<picture>
+						<img src="https://picsum.photos/seed/200/1920/750" alt="" width="1920" height="750" />
+					</picture>
+				</li>
+				<li class="splide__slide">
+					<picture>
+						<img src="https://picsum.photos/seed/300/1920/750" alt="" width="1920" height="750" />
+					</picture>
+				</li>
+			</ul>
+		</div>
+	</section>
 	<section class="py-12 pc:py-24">
 		<div class="container">
 			<h2 class="text-3xl font-bold leading-sung text-center mb-5 tablet:text-5xl tablet:mb-10 scroll fadeIn">
