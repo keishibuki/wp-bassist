@@ -132,15 +132,40 @@ body.open-drawer {
 }
 
 .wpcf7-form {
+	label {
+		@apply inline-block mb-2 font-bold;
+	}
+
 	.wpcf7-submit {
-		@apply py-2 mr-auto w-40 mt-3 text-lg font-bold text-white border-2 border-transparent bg-primary rounded shadow-md;
+		@apply block mx-auto mt-8 py-4 px-16 text-lg font-bold text-white border-2 border-transparent bg-primary rounded shadow-md;
 		&:hover {
 			@apply bg-white text-primary border-primary shadow-lg;
 		}
 	}
 
+	.wpcf7-spinner {
+		@apply absolute top-0 right-0 bottom-0 left-0 m-auto;
+	}
+
 	.wpcf7-form-control-wrap {
 		@apply block w-full mb-0;
+	}
+
+	.wpcf7-checkbox,
+	.wpcf7-radio {
+		@apply flex flex-wrap flex-col gap-2 leading-none accent-fuchsia-600;
+
+		.wpcf7-list-item {
+			@apply m-0 leading-none;
+	
+			label {
+				@apply flex items-center gap-2 m-0 font-normal;
+			}
+		}
+
+		input {
+			@apply w-5 h-5;
+		}
 	}
 
 	.wpcf7-not-valid {
@@ -148,7 +173,7 @@ body.open-drawer {
 	}
 
 	.wpcf7-not-valid-tip {
-		@apply font-semibold text-xs text-red-600 block mb-1 -mt-1;
+		@apply font-semibold text-xs text-red-600 block mt-2;
 	}
 
 	.wpcf7-response-output {

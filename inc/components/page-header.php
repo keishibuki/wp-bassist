@@ -13,9 +13,11 @@ if ( ! $page_title ) {
 }
 
 ?>
-<div>
-	<h1><?php echo esc_html( $page_title ); ?></h1>
-	<?php if ( $page_description ) : ?>
-	<p><?php echo esc_html( $page_description ); ?></p>
-	<?php endif; ?>
+<div class="text-center py-16 bg-gray-200">
+	<div class="container">
+		<h1 class="text-4xl font-bold"><?php echo esc_html( $page_title ); ?></h1>
+		<?php if ( $page_description ) : ?>
+		<p class="text-base"><?php echo esc_html( $page_description ); ?></p>
+		<?php endif; ?>
+	</div>
 </div>
