@@ -1,5 +1,6 @@
 import 'viewport-extra';
 import Splide from '@splidejs/splide';
+import '@splidejs/splide/dist/css/splide.min.css';
 
 new Splide( '.splide', {
 	type: 'fade',
