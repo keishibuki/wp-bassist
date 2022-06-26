@@ -15,6 +15,6 @@ if ( ! $post_term || ! isset( $post_term->name ) ) {
 
 ?>
 <a href="<?php echo esc_url( get_term_link( $post_term->term_id, $post_taxonomy ) ); ?>"
-	class="inline-block px-3 py-1 text-sm text-white bg-primary">
+	class="inline-block px-3 py-2 text-xs leading-none text-white bg-primary tablet:py-1 tablet:text-sm">
 	<?php echo esc_html( $post_term->name ); ?>
 </a>

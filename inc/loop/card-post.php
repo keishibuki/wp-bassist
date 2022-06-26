@@ -44,7 +44,7 @@
 		}
 		?>
 	</div>
-	<h3 class="font-bold line-clamp-2">
+	<h3 class="font-bold line-clamp-3">
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 	</h3>
 </li>
