@@ -18,7 +18,7 @@
 		)
 	);
 	?>
-	<div class="container entry-content py-12 pc:py-24">
+	<div class="container entry-content py-12 pc:py-16">
 		<?php
 		if ( have_posts() ) :
 			while ( have_posts() ) :

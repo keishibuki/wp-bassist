@@ -6,7 +6,7 @@
  */
 
 ?>
-<div class="entry-content" itemprop="mainEntityOfPage">
+<div class="entry-content py-12 pc:py-16" itemprop="mainEntityOfPage">
 	<?php
 	if ( has_post_thumbnail() ) {
 		the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
