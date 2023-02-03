@@ -154,4 +154,8 @@
     .alignleft {
         @apply my-2 mr-8 float-left;
     }
+
+    .wp-caption {
+        max-width: 100%;
+    }
 }
