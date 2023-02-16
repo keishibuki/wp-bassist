@@ -13,7 +13,7 @@
 
 <li
 	<?php post_class( array( 'flex', 'flex-wrap', 'items-center', 'py-5', 'border-b', 'border-gray-300', 'last:border-b-0' ) ); ?>>
-	<time datetime="<?php the_time( 'Y-m-d' ); ?>" class="block text-sm leading-none">
+	<time datetime="<?php the_time( 'Y-m-d' ); ?>" class="block text-sm leading-none w-[80px]">
 		<?php the_time( 'Y-m-d' ); ?>
 	</time>
 	<div class="flex items-center gap-2 ml-3 tablet:mx-3">
@@ -33,7 +33,7 @@
 		}
 		?>
 	</div>
-	<h3 class="mt-4 w-full font-bold line-clamp-1 tablet:mt-0 tablet:flex-1">
+	<h3 class="mt-4 w-full font-bold line-clamp-1 flex-1 tablet:mt-0">
 		<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 	</h3>
 </li>
